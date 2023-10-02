@@ -15,10 +15,63 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: lighter;
 }
 
-/*  Set the font */
 body {
   font-family: "Helvetica", sans-serif;
 }
 
-/* STYLES */
-/* Write your CSS below */
+.full-img {
+  display:flex;
+  height:90vh;
+  min-height:400px;
+
+  align-items: center;
+  justify-content:center;
+  background-image: url('../images/apple-pie.jpg');
+}
+
+.full-img h1 {
+  color:#FFF;
+  font-size:4rem;
+}
+.box {
+  padding:4rem;
+  border-bottom:1px solid #a19d9d;
+  max-width:960px;
+  margin:0 auto;
+}
+
+.box:last-of-type {
+  border-bottom:0;
+}
+
+.box hr {
+  margin-top:2.5rem;
+}
+.box img {
+  margin:0 auto;
+  display:block;
+  max-width:400px;
+  margin-top: 2rem;
+}
+
+.box ul, 
+.box ol {
+  padding-top: 2rem;
+  padding-left:2rem;
+}
+
+.box ol li,
+.box ul li {
+  padding-left: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.box ul li::marker {
+  content:"-";
+}
+.box ol {
+  list-style:none;
+}
+.box ol li::before {
+  content: counter(list-item) ") ";
+  counter-increment: 1;
+}
